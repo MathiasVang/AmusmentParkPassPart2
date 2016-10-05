@@ -57,9 +57,9 @@ final class EntranceTower {
                 switch guest {
                 case .vipGuest:
                     return [.allRides, .skipLine]
-                     case .seasonPassGuest:
+                case .seasonPassGuest:
                      return [.allRides, .skipLine]
-                     case .seniorGuest:
+                case .seniorGuest:
                      return [.allRides, .skipLine]
                 default:
                     return [.allRides]
@@ -85,6 +85,10 @@ final class EntranceTower {
                 switch guest {
                 case .vipGuest:
                     return [.foodDiscount10, .merchDiscount20]
+                case .seasonPassGuest:
+                    return [.foodDiscount10, .merchDiscount20]
+                case .seniorGuest:
+                    return [.foodDiscount10, .merchDiscount10]
                 default:
                     return nil
                 }

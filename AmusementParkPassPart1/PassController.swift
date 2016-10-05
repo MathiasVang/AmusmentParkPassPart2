@@ -61,58 +61,76 @@ class PassController: UIViewController {
         buttonDesign()
         
         if classicGuest != nil {
-            discountAccessButton.isEnabled = true
+            discountAccessButton.isEnabled = false
+            greyColor(button: discountAccessButton)
             selectedEntrant = classicGuest!
         } else if vipGuest != nil {
             discountAccessButton.isEnabled = true
+            whiteColor(button: discountAccessButton)
             selectedEntrant = vipGuest!
         } else if childGuest != nil {
-            discountAccessButton.isEnabled = true
+            discountAccessButton.isEnabled = false
+            greyColor(button: discountAccessButton)
             selectedEntrant = childGuest!
         } else if seasonPassGuest != nil {
             discountAccessButton.isEnabled = true
+            whiteColor(button: discountAccessButton)
             selectedEntrant = seasonPassGuest!
         } else if seniorGuest != nil {
             discountAccessButton.isEnabled = true
+            whiteColor(button: discountAccessButton)
             selectedEntrant = seniorGuest!
         } else if hourlyEmployeeFood != nil {
             discountAccessButton.isEnabled = true
+            whiteColor(button: discountAccessButton)
             selectedEntrant = hourlyEmployeeFood!
         } else if hourlyEmployeeRide != nil {
             discountAccessButton.isEnabled = true
+            whiteColor(button: discountAccessButton)
             selectedEntrant = hourlyEmployeeRide!
         } else if hourlyEmployeeMerch != nil {
             discountAccessButton.isEnabled = true
+            whiteColor(button: discountAccessButton)
             selectedEntrant = hourlyEmployeeMerch!
         } else if manager != nil {
             discountAccessButton.isEnabled = true
+            whiteColor(button: discountAccessButton)
             selectedEntrant = manager!
         } else if contractEmployeeAcme != nil {
             discountAccessButton.isEnabled = false
+            greyColor(button: discountAccessButton)
             selectedEntrant = contractEmployeeAcme!
         } else if contractEmployeeOrkin != nil {
             discountAccessButton.isEnabled = false
+            greyColor(button: discountAccessButton)
             selectedEntrant = contractEmployeeOrkin!
         } else if contractEmployeeFedex != nil {
             discountAccessButton.isEnabled = false
+            greyColor(button: discountAccessButton)
             selectedEntrant = contractEmployeeFedex!
         } else if contractEmployeeNWElictrical != nil {
             discountAccessButton.isEnabled = false
+            greyColor(button: discountAccessButton)
             selectedEntrant = contractEmployeeNWElictrical!
         } else if vendor1001 != nil {
             discountAccessButton.isEnabled = false
+            greyColor(button: discountAccessButton)
             selectedEntrant = vendor1001!
         } else if vendor1002 != nil {
             discountAccessButton.isEnabled = false
+            greyColor(button: discountAccessButton)
             selectedEntrant = vendor1002!
         } else if vendor1003 != nil {
             discountAccessButton.isEnabled = false
+            greyColor(button: discountAccessButton)
             selectedEntrant = vendor1003!
         } else if vendor2001 != nil {
             discountAccessButton.isEnabled = false
+            greyColor(button: discountAccessButton)
             selectedEntrant = vendor2001!
         } else if vendor2002 != nil {
             discountAccessButton.isEnabled = false
+            greyColor(button: discountAccessButton)
             selectedEntrant = vendor2002!
         }
         
@@ -497,6 +515,12 @@ class PassController: UIViewController {
         fifthButton.isHidden = true
         sixthButton.isHidden = true
     }
-
     
+    func whiteColor(button: UIButton) {
+        button.backgroundColor = UIColor(red: 239/255.0, green: 236/255.0, blue: 241/255.0, alpha: 1.0)
+    }
+    
+    func greyColor(button: UIButton) {
+        button.backgroundColor = UIColor(red: 128/255.0, green: 128/255.0, blue: 128/255.0, alpha: 1.0)
+    }
 }
